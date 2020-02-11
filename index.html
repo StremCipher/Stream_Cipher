@@ -1,8 +1,66 @@
 <!DOCTYPE html>
 <html>
-<body style="background-color:black;padding:100px; background-image:url('https://addons-media.operacdn.com/media/CACHE/images/themes/26/226826/1.0-rev1/images/4995ea16ae49ac1176c31e677d5ee879/da6bb0a1349f98827ce12dc95c2e288c.jpg')">
- 
-<h1 style="color:red;text-align:left;padding:200px">  Stream_Cipher</h1>
+<title>Stream_Cipher</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<body>
+
+<div class="w3-container">
+ </div>
+
+<div class="w3-content w3-display-container" style="max-width:600px">
+  <img class="mySlides" src="https://i.pinimg.com/564x/22/6c/dc/226cdcfa1ac426ec9ac3b78e9665b05e.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.pinimg.com/564x/d3/8b/5b/d38b5ba8dd4dda385b61ba9362b61d99.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.pinimg.com/564x/dd/83/73/dd8373102cc9238919d99544b8b2647a.jpg" style="width:100%">
+
+   <img class="mySlides" src="https://i.pinimg.com/564x/81/a2/4b/81a24bd54e49db0cb51a84b1359f4a32.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.pinimg.com/564x/6d/e7/f7/6de7f75b0b12f0e2862a877fc4be18b7.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.pinimg.com/564x/61/6b/2f/616b2f95ae4beedd05c00196404a3ecc.jpg" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(6)"></span>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
 
 </body>
-</html>
+</html> 
